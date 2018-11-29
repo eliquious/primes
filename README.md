@@ -4,19 +4,19 @@ This is a Go program for looking at radial prime distributions and other things.
 
 ## Curiosities and Observations
 
-**Twin Primes**
+### **Twin Primes**
 
 Twin primes are primes which are separated by 2. Oddly enough, there are no twin primes where the second, larger prime ends in 7 (other than 7). This is because there are no primes which end in 5 (other than 5), simply due to the fact that any number that ends in 5 is divisible by 5 and thus not prime.
 
 This means that the second of the twin primes above 7 can only end in 1, 3 and 9. Which limits the last digit possibilities to (1,3), (7, 9) and (9, 1).
 
-**Sum of Primes**
+### **Sum of Primes**
 
 Primes are also limited by their sums. Due to the consequence that all numbers divisible by 3 have a sum that is also divisible by three, means that the sum of the digits in a prime will never be divisible by three either.
 
 ![Sum of Primes](./images/SumOfDigitsDistribution.png)
 
-**Prime Azimuths**
+### **Prime Azimuths**
 
 This is kind of strange. When primes are plotted in cartesian coordinates, their azimuths are limited to a small set of possible angles. This set of angles differ depending on the last digit of the prime. When the primes are grouped by their last digit (1, 3, 7, or 9), each group has 24 azimuths. This means that when plotted in this manner, primes that end with 1 will only be along one of the 24 possibilities. The same is true for all primes of each group.
 
@@ -39,6 +39,10 @@ if primeAzm < 0 {
 
 ```
 
-Another way to get the same answer is to mod the prime by 360 degrees.
+Another way to get the same answer is to mod the prime by 360 degrees. This method perhaps allows for more undersanding as the last digit will not change if the modulo divisor is divisible by 10.
 
 ![Prime azimuths](./images/AzimuthByLastDigit.png)
+
+I have also noticed that each azimuth seems to be 'sourced' by a limited set of other azimuths. Azimuths farther away from the prime is less likely to provide for the previous prime by some logarithmic bound. That is to say that smaller prime gaps are more likely.
+
+If one could understand the probability to which each azimuth sources another, then perhaps you could limit the search for the following prime to the numbers along certain azimuths. I imagine there is a proof in there somewhere, but I would not be able to find it.
