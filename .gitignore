@@ -13,3 +13,5 @@
 
 # Tool output
 *.csv
+
+.vscode/
