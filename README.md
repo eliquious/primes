@@ -1,6 +1,6 @@
 # primes
 
-Primes is a Go program for looking at radial prime distributions and other things. There are various outputs produced which catalogue primes. Most of the output centers around the radial distribution of primes when they are used as degrees. Grouping primes by their last digit produces some interesting patters as well. Plots were produced manually using Plotly.
+This is a Go program for looking at radial prime distributions and other things. There are various outputs produced which catalogue primes. Most of the output centers around the radial distribution of primes when they are used as degrees. Grouping primes by their last digit produces some interesting patters as well. Plots were produced manually using Plotly.
 
 ## Curiosities and Observations
 
